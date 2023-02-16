@@ -1,0 +1,167 @@
+.dialogBox {
+  width: 50vh;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.pmain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.adj {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+.psub {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 18px 24px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+}
+.pimg {
+  width: 100%;
+  height: auto;
+}
+.uimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+}
+.ucon {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+.psubcon {
+  margin: 0px 20px;
+}
+.dt {
+  padding-top: 3px;
+  font-size: 15px;
+  font-style: italic;
+  color: #4f4f4f;
+}
+.name {
+  padding-bottom: 3px;
+  font-family: Roboto Mono;
+}
+.pcap {
+  width: 100%;
+  font-family: Inter;
+  padding: 15px 0px;
+  font-size: large;
+}
+.pq {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pq > button {
+  width: 100%;
+  margin: 7px 0px;
+  background-color: #f1f5f9;
+  border: 0px;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: medium;
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease background-color;
+}
+.pq > button:hover {
+  background-color: #e5e7eb;
+}
+.pheart {
+  color: #dc2626;
+}
+.heart {
+  color: #707070;
+  padding-left: 5px;
+}
+.commentForm {
+  width: 100%;
+  display: flex;
+  padding: 3px;
+}
+.commentForm > input {
+  width: 70%;
+  height: 24px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none;
+  border-style: solid;
+}
+.uil {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f1f5f9;
+  margin: 7px;
+}
+.uil > div > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+.pp {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.pp > button {
+  width: 45%;
+  background-color: #fbbf24;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pil {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pilu {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+}
+.pilu > button {
+  background-color: #f1f5f9;
+  border: none;
+  color: #dc2626;
+}
+.commentForm > button {
+  width: 20%;
+  height: 30px;
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+  border-style: none;
+  color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+@media screen and (max-width: 720px) {
+  .dialogBox {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
