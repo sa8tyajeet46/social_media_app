@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://social-app-a10b8.web.app",
   })
 );
 app.use(express.json({ limit: "50mb" }));
