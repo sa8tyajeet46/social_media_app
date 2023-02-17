@@ -85,6 +85,7 @@ const verifyUser = async (req, res) => {
     const options = {
       httpOnly: true,
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      sameSite: "none",
     };
     const newUser = await User.create(decodedData);
     const t = await newUser.generateToken();
@@ -124,6 +125,7 @@ const login = async (req, res, next) => {
     const options = {
       httpOnly: true,
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      sameSite: "none",
     };
     const token = await user.generateToken();
     res.status(200).cookie("token", { token }, options).json({
@@ -143,6 +145,7 @@ const logout = async (req, res, next) => {
     res.cookie("token", null, {
       httpOnly: true,
       expires: new Date(Date.now()),
+      sameSite: "none",
     });
     res.status(200).json({
       sucess: true,
@@ -360,6 +363,7 @@ const deleteUser = async (req, res, next) => {
       .cookie("token", null, {
         httpOnly: true,
         expires: new Date(Date.now()),
+        sameSite: "none",
       })
       .json({
         sucess: true,

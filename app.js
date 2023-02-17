@@ -4,14 +4,17 @@ const cors = require("cors");
 const app = express();
 const postRouter = require("./routes/posts");
 const userRouter = require("./routes/users");
+const bodyParser = require("body-parser");
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
     credentials: true,
+    origin: "https://localhost:3000",
   })
 );
 app.use(express.json({ limit: "50mb" }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(postRouter);
